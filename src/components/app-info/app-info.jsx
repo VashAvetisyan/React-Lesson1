@@ -1,5 +1,6 @@
 import './app-info.scss'
 
+
 export default function AppInfo() {
     return (
         <div className="app-info block">

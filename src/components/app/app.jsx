@@ -4,9 +4,12 @@ import AppFilter from '../app-filter/app-filter'
 import AppInfo from '../app-info/app-info'
 import AppSearch from '../app-search/app-search'
 
+import dataMockup from '../../data/data-mockup'
 import './app.scss'
 
 export default function App() {
+  
+
     return (
         <div className="app">
             <AppInfo />
@@ -15,7 +18,7 @@ export default function App() {
                 <AppSearch />
                 <AppFilter />
             </div>
-            <AppEmployeeList />
+            <AppEmployeeList data={dataMockup}/>
             <AppAddNewEmployee />
         </div>
     )
