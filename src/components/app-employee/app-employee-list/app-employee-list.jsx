@@ -1,16 +1,17 @@
+import { Component } from "react";
 import AppEmployeeItem from "../app-employee-item/app-employee-item";
 
-export default function AppEmployeeList({ data }) {
-    const employee = data.map(item => {
-        console.log(item)
-        return <AppEmployeeItem key={item.id} {...item} />
-    })
-
-    console.log(employee)
-
+export default class AppEmployeeList extends Component {
+  render() {
+    const { data } = this.props;
+    const employees = data.map(item => {
+      return <AppEmployeeItem key={item.id} {...item} />;
+    });
+  
     return (
-        <div className="block">
-            {employee}
-        </div>
+      <div className="block">
+        {employees}
+      </div>
     );
+  }
 }
